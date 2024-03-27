@@ -3,6 +3,7 @@ build/
 *.txt
 *.xlsx
 *.ipynb
-/Entrance
-/Database
+Entrance/
+Database/
+__pycache__/
 .idea/

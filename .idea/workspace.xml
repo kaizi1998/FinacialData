@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a435cc8b-fd87-46c6-8f01-a5a444c1855f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/FinancialData.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jupyter-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigReader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExcelTools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinancialReportGenerator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinancialReportGetter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MakeFinancialReport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MakeFinancialReport.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SqliteServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StationOrderHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StationOrderServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StationOrderUpdater.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setting/站点映射表.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +247,7 @@
       <workItem from="1711418619149" duration="2373000" />
       <workItem from="1711434719791" duration="11048000" />
       <workItem from="1711504663101" duration="8957000" />
-      <workItem from="1711521502835" duration="11000" />
+      <workItem from="1711521502835" duration="125000" />
     </task>
     <servers />
   </component>
