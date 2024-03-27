@@ -1,0 +1,8 @@
+dist/
+build/
+*.txt
+*.xlsx
+*.ipynb
+/Entrance
+/Database
+.idea/

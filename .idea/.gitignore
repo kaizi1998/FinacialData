@@ -1,0 +1,8 @@
+# Default ignored files
+/../../FinancialData /.idea/shelf/
+/../../FinancialData /.idea/workspace.xml
+# Editor-based HTTP Client requests
+/../../FinancialData /.idea/httpRequests/
+# Datasource local storage ignored files
+/../../FinancialData /.idea/dataSources/
+/../../FinancialData /.idea/dataSources.local.xml
