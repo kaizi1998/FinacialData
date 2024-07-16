@@ -15,7 +15,8 @@ database_station_order = _mk_dirs("\\Database")+"\\StationOrder.db"
 
 entrance_huitian = _mk_dirs("\\Entrance\\汇天\\")
 entrance_xiaoju = _mk_dirs("\\Entrance\\小桔\\")
-entrance_xingxing = _mk_dirs("\\Entrance\\星星\\")
+entrance_xingxing_old = _mk_dirs("\\Entrance\\星星-旧\\")
+entrance_xingxing_new = _mk_dirs("\\Entrance\\星星-新\\")
 entrance_kuaiman_new = _mk_dirs("\\Entrance\\快满-新\\")
 entrance_kuaiman_old = _mk_dirs("\\Entrance\\快满-旧\\")
 

@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import chardet
-from ConfigReader import entrance_huitian, entrance_xiaoju, entrance_xingxing, entrance_kuaiman_new, entrance_kuaiman_old
+from ConfigReader import entrance_huitian, entrance_xiaoju, entrance_xingxing_old, entrance_xingxing_new, entrance_kuaiman_new, entrance_kuaiman_old
 from ConfigReader import table_file_have_read, station_order_table_huitian, station_order_table_xiaoju, station_order_table_kuaiman, station_order_table_xingxing, station_order_table_processed
 from StationOrderServer import StationOrderServer
 from StationOrderHandler import StationOrderHandler
@@ -81,9 +81,9 @@ class StationDataUpdater:
         file_new_read = list(file_new_read)
         self.update_file_have_read(platform, file_new_read)
 
-    def xingxing(self):
+    def xingxing_old(self):
         platform = station_order_table_xingxing
-        folder_path = entrance_xingxing
+        folder_path = entrance_xingxing_old
         file_have_read = self.get_file_have_read(platform)
         file_new_read = set()
         # 遍历文件夹
@@ -94,12 +94,34 @@ class StationDataUpdater:
                 file_encoding = self._detect_encoding(file_path)
                 df = pd.read_csv(file_path, skiprows=3, encoding=file_encoding)
                 df["电站名称"] = df["电站名称"].str.strip()
-                df["充电结束时间"] = pd.to_datetime(df["充电结束时间"].str.strip(), format="%Y.%m.%d %H:%M:%S")
+                df["实际充电结束时间"] = pd.to_datetime(df["实际充电结束时间"].str.strip(), format="%Y.%m.%d %H:%M:%S")
                 df["平台订单号"] = df["平台订单号"].astype(str).str.strip()
                 df["业务订单号"] = df["业务订单号"].astype(str).str.strip()
                 df["枪编号"] = df["枪编号"].astype(str).str.strip()
                 # cls.data_server.update_station_order(df=df, table_name=station_order_table_xingxing)
-                self.data_server.update_station_order(df=StationOrderHandler.xingxing(df),
+                self.data_server.update_station_order(df=StationOrderHandler.xingxing_old(df),
+                                                     table_name=station_order_table_processed)
+                file_new_read.add(filename)
+        file_new_read = list(file_new_read)
+        self.update_file_have_read(platform, file_new_read)
+
+    def xingxing_new(self):
+        platform = station_order_table_xingxing
+        folder_path = entrance_xingxing_new
+        file_have_read = self.get_file_have_read(platform)
+        file_new_read = set()
+        # 遍历文件夹
+        for filename in os.listdir(folder_path):
+            if (filename.endswith('.xlsx') and not (filename.startswith('~') or filename.startswith('$'))) and filename not in file_have_read:
+                print(f"读取文件{filename}")
+                file_path = os.path.join(folder_path, filename)
+                df = pd.read_excel(file_path, engine="openpyxl")
+                df["电站名称"] = df["电站名称"].str.strip()
+                df["充电结束时间"] = pd.to_datetime(df["充电结束时间"].str.strip(), format="%Y-%m-%d %H:%M:%S")
+                df["平台订单号"] = df["平台订单号"].astype(str).str.strip()
+                df["业务订单号"] = df["业务订单号"].astype(str).str.strip()
+                df["枪编号"] = df["枪编号"].astype(str).str.strip()
+                self.data_server.update_station_order(df=StationOrderHandler.xingxing_new(df),
                                                      table_name=station_order_table_processed)
                 file_new_read.add(filename)
         file_new_read = list(file_new_read)

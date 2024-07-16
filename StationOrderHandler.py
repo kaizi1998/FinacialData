@@ -68,7 +68,7 @@ class StationOrderHandler:
         return df
 
     @classmethod
-    def xingxing(cls, df: pd.DataFrame):
+    def xingxing_old(cls, df: pd.DataFrame):
         platform = "星星"
         df = df.drop_duplicates(subset=['平台订单号', '实际充电结束时间'])
         # 选择你想要的列并给它们指定新的列名
@@ -80,6 +80,27 @@ class StationOrderHandler:
             '订单电量(度)': 'charging_capacity(kwh)',
             '订单电费(元)': 'electric_fee(RMB)',
             '订单服务费(元)': 'service_fee(RMB)'
+        }
+        df = df[selected_columns.keys()].rename(columns=selected_columns)
+        df.insert(2, 'platform', platform)
+        df = pd.merge(df, cls.df_station_map, on=['station_name_platform', "platform"], how='inner')
+        df.drop(columns=['station_name_platform', "platform"], inplace=True)
+        df.sort_values(by=['time', 'station_id', 'order_id'], inplace=True)
+        return df
+
+    @classmethod
+    def xingxing_new(cls, df: pd.DataFrame):
+        platform = "星星"
+        df = df.drop_duplicates(subset=['平台订单号', '充电结束时间'])
+        # 选择你想要的列并给它们指定新的列名
+        # 假设你想选择名为 'old_column_name1' 和 'old_column_name2' 的列，并分别重命名为 'new_column_name1' 和 'new_column_name2'
+        selected_columns = {
+            '充电结束时间': 'time',
+            '电站名称': 'station_name_platform',
+            '平台订单号': 'order_id',
+            '订单电量': 'charging_capacity(kwh)',
+            '电费': 'electric_fee(RMB)',
+            '服务费': 'service_fee(RMB)'
         }
         df = df[selected_columns.keys()].rename(columns=selected_columns)
         df.insert(2, 'platform', platform)
@@ -101,8 +122,8 @@ class StationOrderHandler:
             '站点': 'station_name_platform',
             '订单ID': 'order_id',
             '总电量': 'charging_capacity(kwh)',
-            '订单电费': 'electric_fee(RMB)',
-            '订单服务费': 'service_fee(RMB)'
+            '实付电费': 'electric_fee(RMB)',
+            '实付服务费': 'service_fee(RMB)'
         }
         df = df[selected_columns.keys()].rename(columns=selected_columns)
         df.insert(2, 'platform', platform)
