@@ -1,5 +1,6 @@
 import pandas as pd
 from FinancialReportGetter import FinancialReportGetter
+from FinancialReportGetterAfterStartDate import FinancialReportGetterAfterStartDate
 from openpyxl.styles import Font, Color, PatternFill, Border, Side, Alignment, NamedStyle
 # 先假设只有一个城市长沙
 from openpyxl import Workbook
@@ -275,7 +276,8 @@ class FinancialReportGenerator:
 
      @classmethod
      def generate_financial_report(cls, year, month, day):
-          reporters = FinancialReportGetter.get_station_order_reporters(year, month, day)
+          # reporters = FinancialReportGetter.get_station_order_reporters(year, month, day)
+          reporters = FinancialReportGetterAfterStartDate.get_station_order_reporters(year, month, day)
           # 创建一个工作簿（Workbook）
           wb = Workbook()
           # 获取当前活动的工作表（Worksheet）,就是子表
