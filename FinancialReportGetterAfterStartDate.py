@@ -281,3 +281,4 @@ class FinancialReportGetterAfterStartDate:
         cls.server.execute_query(sql)
         return cls.server.get_table(cls.temp_station)
 
+
