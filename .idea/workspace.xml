@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a435cc8b-fd87-46c6-8f01-a5a444c1855f" name="Changes" comment="2024-07-16">
+      <change beforePath="$PROJECT_DIR$/.idea/FinancialData.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinancialData.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinancialReportGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinancialReportGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinancialReportGetterAfterStartDate.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinancialReportGetterAfterStartDate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MakeFinancialReport.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakeFinancialReport.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MakeFinancialReport.spec" beforeDir="false" afterPath="$PROJECT_DIR$/MakeFinancialReport.spec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setting/站点映射表.csv" beforeDir="false" afterPath="$PROJECT_DIR$/setting/站点映射表.csv" afterDir="false" />
@@ -55,7 +58,7 @@
     &quot;Python.FinancialReportGenerator.executor&quot;: &quot;Debug&quot;,
     &quot;Python.FinancialReportGetter.executor&quot;: &quot;Debug&quot;,
     &quot;Python.FinancialReportGetterAfterStartDate.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.MakeFinancialReport.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.MakeFinancialReport.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Debug&quot;,
     &quot;Python.ttt (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.ttt.executor&quot;: &quot;Run&quot;,
@@ -63,7 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/000projects/python/FinancialData/setting&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/00projects/python/FinacialData/Entrance/小桔&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,11 +78,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00projects\python\FinacialData\Entrance\小桔" />
+      <recent name="D:\00projects\python\FinacialData\setting" />
       <recent name="D:\000projects\python\FinancialData\setting" />
       <recent name="D:\000projects\python\FinancialData\dist\MakeFinancialReport\setting" />
       <recent name="D:\000projects\python\FinancialData\dist\MakeFinancialReport\Entrance\小桔" />
-      <recent name="D:\000projects\python\FinancialData\Entrance\小桔" />
-      <recent name="D:\000projects\python\FinancialData\dist\MakeFinancialReport\Database" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\000projects\python\FinancialData\Entrance\小桔" />
@@ -215,8 +218,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.19072.16" />
+        <option value="bundled-python-sdk-8336bb23522e-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.19072.16" />
       </set>
     </attachedChunks>
   </component>
@@ -284,6 +287,23 @@
       <workItem from="1721956967812" duration="596000" />
       <workItem from="1722301920449" duration="6000" />
       <workItem from="1722580639192" duration="720000" />
+      <workItem from="1723538907512" duration="1987000" />
+      <workItem from="1723541397539" duration="1350000" />
+      <workItem from="1723688794676" duration="448000" />
+      <workItem from="1723689266182" duration="5699000" />
+      <workItem from="1725538815599" duration="153000" />
+      <workItem from="1728539128041" duration="4302000" />
+      <workItem from="1728546388366" duration="1723000" />
+      <workItem from="1729652087659" duration="995000" />
+      <workItem from="1730191453295" duration="34000" />
+      <workItem from="1731308289803" duration="48000" />
+      <workItem from="1732243635272" duration="11000" />
+      <workItem from="1732245086699" duration="2251000" />
+      <workItem from="1732674704465" duration="980000" />
+      <workItem from="1732675748606" duration="160000" />
+      <workItem from="1733712063675" duration="8112000" />
+      <workItem from="1735788781910" duration="2162000" />
+      <workItem from="1735805841925" duration="4085000" />
     </task>
     <task id="LOCAL-00001" summary="2024-07-16">
       <option name="closed" value="true" />
@@ -333,6 +353,7 @@
     <SUITE FILE_PATH="coverage/FinancialData$MakeFinancialReport.coverage" NAME="MakeFinancialReport Coverage Results" MODIFIED="1721809776797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FinancialData$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1709543089915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FinancialData$ttt__1_.coverage" NAME="ttt (1) Coverage Results" MODIFIED="1709546403585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/临时/ji" />
+    <SUITE FILE_PATH="coverage/FinacialData$MakeFinancialReport.coverage" NAME="MakeFinancialReport Coverage Results" MODIFIED="1735809460034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FinancialData$test.coverage" NAME="test Coverage Results" MODIFIED="1711505076077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FinancialData$ExcelTools.coverage" NAME="ExcelTools Coverage Results" MODIFIED="1707034406198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>

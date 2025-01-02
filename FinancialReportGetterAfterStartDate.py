@@ -87,8 +87,9 @@ class FinancialReportGetterAfterStartDate:
     def get_station_order_reporters(cls, year=None, month=None, day=None):
         data = {}
         for station_id, start_time in cls.dic_station_id_start_time.items():
-            if station_id == 139:
+            if station_id == 169:
                 i = 123
+
             start_time = start_time.replace(".", "-")
             df = cls.get_station_order_reporter(year, month, day, station_id, start_time)
 
@@ -107,7 +108,7 @@ class FinancialReportGetterAfterStartDate:
         for city in data.keys():
             cur_df = data[city]
             cur_df = cur_df.drop_duplicates()
-            cur_df = cur_df.sort_values(by='start_time')
+            cur_df = cur_df.sort_values(by=['start_time', 'station_id'])
             cur_df.reset_index(drop=True, inplace=True)
             data[city] = cur_df
         return data
