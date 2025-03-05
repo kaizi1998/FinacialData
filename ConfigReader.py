@@ -11,6 +11,8 @@ def _mk_dirs(path):
         print(f"""文件夹{path}不存在，已为您创建。""")
     return path
 
+logs_path = _mk_dirs("\\Logs")
+
 database_station_order = _mk_dirs("\\Database")+"\\StationOrder.db"
 
 entrance_huitian = _mk_dirs("\\Entrance\\汇天\\")

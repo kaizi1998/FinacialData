@@ -115,12 +115,17 @@ class FinancialReportGetterAfterStartDate:
 
     @classmethod
     def get_station_order_reporter(cls, year, month, day, station_id, start_time):
+        pd.set_option('future.no_silent_downcasting', True)
+        temp = [[str(station_id)]]
+        df = pd.DataFrame(temp, columns=["station_id"])
+
         df_day = cls._get_station_order_report_day(year, month, day, station_id, start_time)
         df_month = cls._get_station_order_report_month(year, month, day, station_id, start_time)
         df_year = cls._get_station_order_report_year(year, month, day, station_id, start_time)
         df_year.drop(columns=["time"], inplace=True)
         df_month.drop(columns=["time"], inplace=True)
-        df = pd.merge(df_year, df_month, on=["station_id"], how='left')
+        df = pd.merge(df, df_year, on=["station_id"], how='left')
+        df = pd.merge(df, df_month, on=["station_id"], how='left')
         df = pd.merge(df, df_day, on=["station_id"], how='left')
 
         df['station_id'] = df['station_id'].astype(int)
@@ -133,9 +138,11 @@ class FinancialReportGetterAfterStartDate:
         df["month_utilize_hours"] = df["month_charging_capacity(kwh)"] / df["total_power"]
         df["year_utilize_hours"] = df["year_charging_capacity(kwh)"] / df["total_power"]
 
+
         df["day_average_service_fee_per_kwh(RMB)"] = df["day_service_fee(RMB)"] / df["day_charging_capacity(kwh)"]
 
         df = df.fillna(0)
+        pd.set_option('future.no_silent_downcasting', False)
         return df
 
     @classmethod

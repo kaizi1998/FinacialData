@@ -1,10 +1,12 @@
+from logger import set_logging
 from StationOrderUpdater import StationDataUpdater
 from FinancialReportGenerator import FinancialReportGenerator
+
 
 # year = input("请输入年份（Year）: ")
 # month = input("请输入月份（Month）: ")
 # day = input("请输入日期（Day）: ")
-year, month, day = 2025, 1, 1
+year, month, day = 2025, 2, 8
 
 print("开始生成"+"{}年{}月{}日".format(year, month, day)+"报表")
 stationDataUpdater = StationDataUpdater()
